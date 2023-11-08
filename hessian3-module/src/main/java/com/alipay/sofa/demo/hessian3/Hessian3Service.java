@@ -20,6 +20,7 @@ public class Hessian3Service {
 
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         HessianOutput ho = new HessianOutput(os);
+        System.out.println("HessianOutput is from: " + ho.getClass().getProtectionDomain().getCodeSource().getLocation());
         ho.writeObject(obj);
         return os.toByteArray();
     }
@@ -29,6 +30,7 @@ public class Hessian3Service {
 
         ByteArrayInputStream is = new ByteArrayInputStream(by);
         HessianInput hi = new HessianInput(is);
+        System.out.println("HessianOutput is from: " + hi.getClass().getProtectionDomain().getCodeSource().getLocation());
         return hi.readObject();
     }
 }
