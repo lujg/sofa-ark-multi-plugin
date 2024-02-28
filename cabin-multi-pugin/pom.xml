@@ -39,7 +39,7 @@
                         <enabled>true</enabled>
                     </snapshots>
                     <id>cabin-release</id>
-                    <url>https://maven.byted.org/repository/releases</url>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </repositories>
             <pluginRepositories>
@@ -48,7 +48,7 @@
                         <enabled>true</enabled>
                     </snapshots>
                     <id>cabin-snapshot</id>
-                    <url>https://maven.byted.org/repository/snapshots</url>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </pluginRepository>
             </pluginRepositories>
         </profile>
