@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cabin-multi-pugin</artifactId>
+        <groupId>com.bytedance.bitsail</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>pojo-cabin-plugin</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.esastack</groupId>
+                <artifactId>cabin-module-maven-plugin</artifactId>
+                <version>${cabin.version}</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>module-repackage</goal>
+                        </goals>
+
+                        <configuration>
+                            <classifier>
+                                cabin-module
+                            </classifier>
+
+                            <!-- configure exported class -->
+                            <exported>
+                                <!-- configure class-level exported class -->
+                                <packages>
+                                    <package>com.test.cabin.demo.pojo</package>
+                                </packages>
+                            </exported>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

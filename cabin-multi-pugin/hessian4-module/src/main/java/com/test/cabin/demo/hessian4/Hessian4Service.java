@@ -2,11 +2,10 @@
  * Alipay.com Inc.
  * Copyright (c) 2004-2018 All Rights Reserved.
  */
-package com.alipay.sofa.demo.hessian3;
+package com.test.cabin.demo.hessian4;
 
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
-import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -15,8 +14,8 @@ import java.io.IOException;
 /**
  * @author qilong.zql
  */
-@Component
-public class Hessian3Service {
+public class Hessian4Service {
+
     public byte[] serialize(Object obj) throws IOException {
         if(obj==null) throw new NullPointerException();
 
@@ -35,4 +34,5 @@ public class Hessian3Service {
         System.out.println("HessianOutput is from: " + hi.getClass().getProtectionDomain().getCodeSource().getLocation());
         return hi.readObject();
     }
+
 }

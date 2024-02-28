@@ -6,6 +6,7 @@ package com.alipay.sofa.demo.hessian4;
 
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -14,6 +15,7 @@ import java.io.IOException;
 /**
  * @author qilong.zql
  */
+@Component
 public class Hessian4Service {
 
     public byte[] serialize(Object obj) throws IOException {
